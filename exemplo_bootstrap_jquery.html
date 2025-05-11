@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exemplo Bootstrap + jQuery</title>
+
+  <!-- Bootstrap CSS (LOCAL) -->
+  <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
+</head>
+<!-- *** AQUI ESTA A DOCUMENTACAO EM INGLES ***
+*** https://getbootstrap.com/docs/4.1/layout/overview/ ***
+
+*** AQUI ESTA A DOCUMENTACAO EM PORTUGUES ***
+*** https://getbootstrap.com.br/docs/4.1/layout/overview/ *** -->
+
+<body>
+  <!-- USO DO BOOTSTRAP NAS CLASSES (SE TIVER DUVIDAS OLHE A DOCUMENTACAO, E SUPER SIMPLES)-->
+  <div class="container text-center mt-5">
+    <h1 class="mb-4">Olá, Bootstrap + jQuery</h1>
+    <button id="botaoAlerta" class="btn btn-success">
+      Clique aqui
+    </button>
+  </div>
+
+  <!-- jQuery (LOCAL) -->
+  <script src="assets/jquery/jquery.min.js"></script>
+
+  <!-- Bootstrap JS (LOCAL) -->
+  <script src="assets/jquery/jquery.min.js"></script>
+
+  <!-- CODIGO FEITO COM JQUERY, AJUDA EM ALGUMAS ANIMACOES -->
+  <script>
+    $(document).ready(function () {
+      $('#botaoAlerta').on('click', function () {
+        alert('Este alerta veio do jQuery 🎉');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
