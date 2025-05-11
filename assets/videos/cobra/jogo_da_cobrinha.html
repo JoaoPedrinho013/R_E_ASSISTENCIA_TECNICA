@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jogo da Cobrinha</title>
+  <style>
+    canvas {
+      background: #111;
+      display: block;
+      margin: 0 auto;
+      border: 2px solid #0f0;
+    }
+    body {
+      text-align: center;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      background: #000;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #444;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>🐍 Jogo da Cobrinha</h1>
+  <canvas id="game" width="600" height="600"></canvas>
+  <p id="pontuacao">Pontuação: 0</p>
+  <p id="maiorPontuacao">Maior Pontuação: 0</p> <!-- Área da maior pontuação -->
+  <button id="limparPontuacao">Limpar Maior Pontuação</button> <!-- Botão para limpar -->
+
+  <script>
+    const canvas = document.getElementById('game');
+    const ctx = canvas.getContext('2d');
+
+    const grid = 20;
+    const tileCount = canvas.width / grid;
+    let pontuacao = 0;
+
+    let cobra = [{ x: 10, y: 10 }];
+    let direcao = { x: 1, y: 0 };
+    let maca = {
+      x: Math.floor(Math.random() * tileCount),
+      y: Math.floor(Math.random() * tileCount),
+    };
+
+    // Recupera a maior pontuação do localStorage
+    let maiorPontuacao = localStorage.getItem('maiorPontuacao') || 0;
+
+    function desenhar() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Desenha maçã
+      ctx.fillStyle = 'red';
+      ctx.fillRect(maca.x * grid, maca.y * grid, grid, grid);
+
+      // Desenha cobra
+      ctx.fillStyle = 'lime';
+      cobra.forEach(parte => {
+        ctx.fillRect(parte.x * grid, parte.y * grid, grid - 2, grid - 2);
+      });
+    }
+
+    function mover() {
+      const cabeca = {
+        x: cobra[0].x + direcao.x,
+        y: cobra[0].y + direcao.y,
+      };
+
+      // Fim de jogo: colidiu com parede
+      if (
+        cabeca.x < 0 || cabeca.x >= tileCount ||
+        cabeca.y < 0 || cabeca.y >= tileCount
+      ) {
+        reiniciar();
+        return;
+      }
+
+      // Fim de jogo: colidiu com o corpo
+      for (let i = 0; i < cobra.length; i++) {
+        if (cobra[i].x === cabeca.x && cobra[i].y === cabeca.y) {
+          reiniciar();
+          return;
+        }
+      }
+
+      cobra.unshift(cabeca); // adiciona nova cabeça
+
+      // Comer maçã
+      if (cabeca.x === maca.x && cabeca.y === maca.y) {
+        pontuacao++;
+        document.getElementById('pontuacao').innerText = 'Pontuação: ' + pontuacao;
+        maca = {
+          x: Math.floor(Math.random() * tileCount),
+          y: Math.floor(Math.random() * tileCount),
+        };
+      } else {
+        cobra.pop(); // remove o último (rabo)
+      }
+
+      // Atualiza a maior pontuação
+      if (pontuacao > maiorPontuacao) {
+        maiorPontuacao = pontuacao;
+        localStorage.setItem('maiorPontuacao', maiorPontuacao); // Salva no localStorage
+        document.getElementById('maiorPontuacao').innerText = 'Maior Pontuação: ' + maiorPontuacao;
+      }
+    }
+
+    function loop() {
+      mover();
+      desenhar();
+    }
+
+    function reiniciar() {
+      alert('Game Over! Pontuação: ' + pontuacao);
+      if (pontuacao > maiorPontuacao) {
+        maiorPontuacao = pontuacao;
+        localStorage.setItem('maiorPontuacao', maiorPontuacao);
+      }
+      cobra = [{ x: 10, y: 10 }];
+      direcao = { x: 1, y: 0 };  // Garantir que a cobra comece indo para a direita
+      pontuacao = 0;
+      document.getElementById('pontuacao').innerText = 'Pontuação: 0';
+      document.getElementById('maiorPontuacao').innerText = 'Maior Pontuação: ' + maiorPontuacao;
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowUp' && direcao.y !== 1) direcao = { x: 0, y: -1 };
+      if (e.key === 'ArrowDown' && direcao.y !== -1) direcao = { x: 0, y: 1 };
+      if (e.key === 'ArrowLeft' && direcao.x !== 1) direcao = { x: -1, y: 0 };
+      if (e.key === 'ArrowRight' && direcao.x !== -1) direcao = { x: 1, y: 0 };
+    });
+
+    // Diminui a velocidade da cobra aumentando o intervalo
+    setInterval(loop, 150); // Aumentei o intervalo de 100ms para 150ms
+
+    // Função para limpar a maior pontuação
+    document.getElementById('limparPontuacao').addEventListener('click', () => {
+      localStorage.removeItem('maiorPontuacao');
+      maiorPontuacao = 0;
+      document.getElementById('maiorPontuacao').innerText = 'Maior Pontuação: 0';
+    });
+
+    // Atualiza a maior pontuação ao carregar a página
+    document.getElementById('maiorPontuacao').innerText = 'Maior Pontuação: ' + maiorPontuacao;
+
+  </script>
+</body>
+</html>
