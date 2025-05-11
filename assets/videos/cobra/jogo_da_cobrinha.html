@@ -133,10 +133,10 @@
     }
 
     document.addEventListener('keydown', e => {
-      if (e.key === 'ArrowUp' && direcao.y !== 1) direcao = { x: 0, y: -1 };
-      if (e.key === 'ArrowDown' && direcao.y !== -1) direcao = { x: 0, y: 1 };
-      if (e.key === 'ArrowLeft' && direcao.x !== 1) direcao = { x: -1, y: 0 };
-      if (e.key === 'ArrowRight' && direcao.x !== -1) direcao = { x: 1, y: 0 };
+      if (e.key === 'ArrowUp' || e.key === 'w' && direcao.y !== 1) direcao = { x: 0, y: -1 };
+      if (e.key === 'ArrowDown' || e.key === 's'  && direcao.y !== -1) direcao = { x: 0, y: 1 };
+      if (e.key === 'ArrowLeft' || e.key === 'a'  && direcao.x !== 1) direcao = { x: -1, y: 0 };
+      if (e.key === 'ArrowRight' || e.key === 'd'  && direcao.x !== -1) direcao = { x: 1, y: 0 };
     });
 
     // Diminui a velocidade da cobra aumentando o intervalo
