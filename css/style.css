@@ -52,7 +52,7 @@ body {
 .menu_lateral>.menu_lateral_header{
     background: linear-gradient(to bottom right,  rgb(45, 45, 45),rgb(33, 33, 33));
     color: white;
-    padding: 2.55em;
+    padding: 1.97em;
     text-align: center;
 }
 .menu_lateral>.menu_lateral_body{
