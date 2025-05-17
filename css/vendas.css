@@ -1,0 +1,36 @@
+.menu_lateral_vendas {
+    position: fixed;
+    top: 8;
+    left: 0;
+    width: 300px;
+    height: 90vh;
+    background: linear-gradient(to bottom right, rgb(33, 33, 33), rgb(45, 45, 45));
+    font-family: "Tomorrow";
+    font-weight: 200;
+    font-size: 1.3em;
+    z-index: 1000;
+    color: white;
+}
+
+.principal>.menu_lateral_vendas>.menu_lateral_body>ul>li>a{
+    text-decoration: none;
+    color: white;
+}
+.principal>.menu_lateral_vendas>.menu_lateral_body>ul>li>a:hover{
+    color: rgb(49, 107, 184);
+}
+
+.menu_lateral_vendas>.menu_lateral_header {
+    padding: 0.5em;
+    justify-self: center;
+    border-bottom: 1px solid white;
+}
+
+.menu_lateral_vendas>.menu_lateral_body {
+    padding: 1.5em;
+    font-size: 0.8em;
+}
+footer.rodape {
+    position: relative;
+    z-index: 1100;
+}

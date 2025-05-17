@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="../assets/icons/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/vendas.css">
     <title>R.E Assistência técnica | Vendas</title>
 </head>
 
@@ -29,10 +30,31 @@
     </header>
 
 
-    <main class="principal container-fluid" style="justify-items: center;">
-        <section style="height: 900px; width: 80%; text-align: center;">Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit. Excepturi perspiciatis itaque tempore numquam illo, quis qui veniam libero esse ducimus,
-            reprehenderit laborum consequatur corporis nobis totam sit, quas consequuntur earum.</section>
+    <main class="principal container-fluid">
+        <div class="menu_lateral_vendas">
+            <div class=" offcanvas-header menu_lateral_header">
+                <h4 class="offcanvas-title" id="offcanvasNavbarLabel">Tabela de Acessórios</h4>
+            </div>
+            <div class="offcanvas-body menu_lateral_body">
+                <ul class="list-unstyled">
+                    <li class="list-group-item"><a href="#">Películas</a></li>
+                    <li class="list-group-item"><a href="#">Cabos</a></li>
+                    <li class="list-group-item"><a href="#">Capinhas</a></li>
+                    <li class="list-group-item"><a href="#">Fones</a></li>
+                    <li class="list-group-item"><a href="#">Periféricos</a></li>
+                    <li class="list-group-item"><a href="#">Armazenamentos</a></li>
+                    <li class="list-group-item"><a href="#">Carregadores</a></li>
+                    <li class="list-group-item"><a href="#">Fontes</a></li>
+                    <li class="list-group-item"><a href="#">Diversos</a></li>
+                </ul>
+            </div>
+        </div>
+        <section style="height: 900px; width: 80%; text-align: center;">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel error delectus saepe id dolor qui, illum,
+            maiores voluptas vitae nemo quis quaerat itaque unde quibusdam praesentium, soluta sunt tempore aut.
+            <section class="cards responsivos com tres colunas">
+            </section>
+        </section>
     </main>
 
     <footer class="rodape container-fluid">
@@ -111,10 +133,14 @@
                 <div class="pagamentos d-flex flex-column">
                     <p class="me-2">Formas de Pagamento:</p>
                     <section>
-                        <i class="fab fa-cc-visa mt-1 ms-2 me-2"
-                            style="background: linear-gradient(-45deg, rgb(0, 140, 255), rgb(0, 0, 255)); -webkit-background-clip: text;-webkit-text-fill-color: transparent;"></i>
-                        <i class="fab fa-cc-mastercard mt-1 me-2"
-                            style="background: linear-gradient(-45deg, orange, red); -webkit-background-clip: text;-webkit-text-fill-color: transparent;"></i>
+                        <img class="mb-1" src="../assets/imagens/icones_pagamento/visa.png" alt="Visa">
+                        <img class="mb-1" src="../assets/imagens/icones_pagamento/mastercard2.png" alt="Mastercard">
+                        <img class="mb-1" src="../assets/imagens/icones_pagamento/elo.png" alt="Elo">
+                        <img class="mb-1" src="../assets/imagens/icones_pagamento/hipercard.png" alt="Hypercard">
+                        <img class="mb-1" src="../assets/imagens/icones_pagamento/americanexpress.png"
+                            alt="American Express">
+                        <img class="mb-1" src="../assets/imagens/icones_pagamento/samsungpay.png" alt="Samsung Pay">
+                        <img class="mb-1" src="../assets/imagens/icones_pagamento/googlepay.png" alt="Google Pay">
                         <i class="fab fa-pix mt-1 me-2" style="color: rgba(0, 255, 255, 0.55);"></i>
                         <i class="fa-solid fa-barcode mt-1 me-2"
                             style="background: linear-gradient(-45deg, rgb(230, 230, 230), rgb(150, 150, 150)); -webkit-background-clip: text;-webkit-text-fill-color: transparent;"></i>
@@ -122,7 +148,7 @@
                 </div>
             </section>
 
-            <section class="direitos_autorais pt-3 pb-1">
+            <section class="direitos_autorais pt-1">
                 <p>&copy;2025 R.E Assistência técnica | Todos os direitos reservados.</p>
             </section>
         </section>
