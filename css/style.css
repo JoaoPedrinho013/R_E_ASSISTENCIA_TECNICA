@@ -108,6 +108,7 @@ body {
     text-align: left;
     margin-left: 15px;
     font-size: 1.8em;
+    text-shadow: 2px 3px 3px rgba(255, 255, 255, 0.5);
 }
 .rodape>.principal_footer>.informacao_footer>div>div>ul>li {
     text-align: left;
@@ -129,7 +130,7 @@ body {
     text-decoration: none;
     color: white;
 }
-.rodape>.principal_footer>.informacao_footer>div>.barra_vertical_servico>ul>li>a:hover {
+.rodape>.principal_footer>.informacao_footer>div>div>ul>li>a:hover {
     text-decoration: underline;
     color: white;
     font-weight: 300;
@@ -140,6 +141,10 @@ body {
     font-size: 1.5em;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.rodape>.principal_footer>.redes_pagamentos>div>p {
+   text-align: center;
+   text-shadow: 2px 3px 3px rgba(255, 255, 255, 0.5);
 }
 
 .rodape>section>.direitos_autorais {
@@ -154,4 +159,7 @@ body {
     position: fixed;
     right: 3em;
     bottom: 3em;
+}
+.card{ 
+    width: 400px;
 }
