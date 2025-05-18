@@ -95,7 +95,6 @@ body {
 
 .rodape>.principal_footer {
     width: 80%;
-    text-align: center;
     color: white;
 
 }
@@ -105,10 +104,16 @@ body {
     margin: 0;
 }
 
+.rodape>.principal_footer>.informacao_footer>div>div>h2 {
+    text-align: left;
+    margin-left: 15px;
+}
 .rodape>.principal_footer>.informacao_footer>div>div>ul>li {
+    text-align: left;
     background-color: transparent;
     color: white;
-    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
     font-size: 1.7em;
 }
 
@@ -120,7 +125,7 @@ body {
     border-right: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
-.rodape>.principal_footer>.informacao_footer>div>.barra_vertical_servico>ul>li>a {
+.rodape>.principal_footer>.informacao_footer>div>div>ul>li>a {
     text-decoration: none;
     color: white;
 }
@@ -141,4 +146,12 @@ body {
     color: rgba(255, 255, 255, 0.5);
     font-family: "Noto_Sans";
     font-weight: 300;
+    text-align: center;
+}
+
+.imgfixa{
+    width: 90px;
+    position: fixed;
+    right: 3em;
+    bottom: 3em;
 }
