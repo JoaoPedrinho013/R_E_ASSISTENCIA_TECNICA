@@ -18,6 +18,10 @@
     z-index: 1100;
 }
 
+
+
+
+
 .principal>.menu_lateral_vendas>.menu_lateral_body>ul>li {
     margin: 10px;
 }
@@ -42,6 +46,10 @@
     padding: 0.5em;
     font-size: 0.85em;
 }
+
+
+
+
 
 footer.rodape {
     position: relative;
