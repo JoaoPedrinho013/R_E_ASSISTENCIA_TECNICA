@@ -107,14 +107,14 @@ body {
 .rodape>.principal_footer>.informacao_footer>div>div>h2 {
     text-align: left;
     margin-left: 15px;
+    font-size: 1.8em;
 }
 .rodape>.principal_footer>.informacao_footer>div>div>ul>li {
     text-align: left;
     background-color: transparent;
-    color: white;
     margin-left: 10px;
     margin-bottom: 5px;
-    font-size: 1.7em;
+    font-size: 1em;
 }
 
 .rodape>.principal_footer>.informacao_footer>div>.barra_vertical {
