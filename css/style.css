@@ -142,3 +142,10 @@ body {
     font-family: "Noto_Sans";
     font-weight: 300;
 }
+
+.imgfixa{
+    width: 90px;
+    position: fixed;
+    right: 3em;
+    bottom: 3em;
+}
