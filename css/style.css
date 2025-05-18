@@ -1,7 +1,10 @@
-body {
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+body {
     height: 100vh;
 }
 
@@ -26,7 +29,7 @@ body {
 
 .cabecalho>section>nav>a {
     text-decoration: none;
-    color: white;
+    color: rgb(250, 250, 250);
     font-family: "Tomorrow";
     font-weight: 200;
     font-size: 1.3em;
@@ -42,22 +45,37 @@ body {
     color: rgb(86, 159, 255);
 }
 
-.menu_lateral{
+.menu_lateral {
     background-color: rgb(180, 180, 180);
-    text-align: center;
     font-family: "Tomorrow";
-    font-weight: 200;
+    font-weight: 300;
     font-size: 1.3em;
 }
-.menu_lateral>.menu_lateral_header{
-    background: linear-gradient(to bottom right,  rgb(45, 45, 45),rgb(33, 33, 33));
-    color: white;
+
+.menu_lateral>.menu_lateral_header {
+    background: linear-gradient(to bottom right, rgb(45, 45, 45), rgb(33, 33, 33));
+    color: rgb(250, 250, 250);
     padding: 1.97em;
-    text-align: center;
 }
-.menu_lateral>.menu_lateral_body{
-    background-color: rgb(180, 180, 180);
-    text-align: center;
+
+.menu_lateral>.menu_lateral_body>ul>.titulo_vendas_lateral {
+    font-weight: 400;
+    color: rgb(60, 60, 60);
+    margin-top: 2em;
+
+}
+
+.menu_lateral>.menu_lateral_body>ul>.caixa_links_lateral>li>a {
+    text-decoration: none;
+    color: rgb(90, 90, 90);
+    font-weight: 200;
+    font-size: 18px;
+    margin: 0 1em;
+}
+
+.menu_lateral>.menu_lateral_body>ul>.caixa_links_lateral>li>a:hover {
+    text-decoration: underline;
+    font-weight: 400;
 }
 
 .principal {
@@ -95,19 +113,19 @@ body {
 }
 
 .rodape>.principal_footer>.informacao_footer>div>.barra_vertical {
-    border-right: 1px solid rgba(255, 255, 255,0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .rodape>.principal_footer>.informacao_footer>div>.barra_vertical_servico {
-    border-right: 1px solid rgba(255, 255, 255,0.5);
-    border-left: 1px solid rgba(255, 255, 255,0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .rodape>.principal_footer>.redes_pagamentos {
     justify-content: center;
     font-size: 1.5em;
-    border-top: 1px solid rgba(255, 255, 255,0.5);
-    border-bottom: 1px solid rgba(255, 255, 255,0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .rodape>section>.direitos_autorais {
