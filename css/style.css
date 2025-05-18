@@ -109,7 +109,7 @@ body {
     background-color: transparent;
     color: white;
     margin-bottom: 10px;
-    font-size: 1.8em;
+    font-size: 1.7em;
 }
 
 .rodape>.principal_footer>.informacao_footer>div>.barra_vertical {
@@ -119,6 +119,15 @@ body {
 .rodape>.principal_footer>.informacao_footer>div>.barra_vertical_servico {
     border-right: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.rodape>.principal_footer>.informacao_footer>div>.barra_vertical_servico>ul>li>a {
+    text-decoration: none;
+    color: white;
+}
+.rodape>.principal_footer>.informacao_footer>div>.barra_vertical_servico>ul>li>a:hover {
+    text-decoration: underline;
+    color: white;
+    font-weight: 300;
 }
 
 .rodape>.principal_footer>.redes_pagamentos {
