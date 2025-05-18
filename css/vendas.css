@@ -1,57 +1,48 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 .cabecalho {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+    z-index: 10;
+}
+
+.container_menu_lateral_vendas {
+    background: linear-gradient(to bottom right, rgb(33, 33, 33), rgb(45, 45, 45));
 }
 
 .menu_lateral_vendas {
-    position: fixed;
+    position: sticky;
     top: 112px;
-    left: 0;
-    width: 200px;
-    height: 90vh;
-    background: linear-gradient(to bottom right, rgb(33, 33, 33), rgb(45, 45, 45));
+    width: 400px;
     font-family: "Tomorrow";
     font-weight: 200;
     color: white;
-    z-index: 1100;
 }
 
+.menu_lateral_vendas>.menu_lateral_vendas_titulo>h5 {
+    padding: 0.5em;
+    justify-self: center;
+    border-bottom: 1px solid white;
+    font-size: 1.5em;
+}
 
-
-
-
-.principal>.menu_lateral_vendas>.menu_lateral_body>ul>li {
+.menu_lateral_vendas>.menu_lateral_vendas_conteudo>ul>li {
     margin: 10px;
+    list-style: none;
 }
 
-.principal>.menu_lateral_vendas>.menu_lateral_body>ul>li>a {
+.menu_lateral_vendas>.menu_lateral_vendas_conteudo>ul>li>a {
     text-decoration: none;
     color: white;
 }
 
-.principal>.menu_lateral_vendas>.menu_lateral_body>ul>li>a:hover {
+.menu_lateral_vendas>.menu_lateral_vendas_conteudo>ul>li>a:hover {
     color: rgb(86, 159, 255);
 }
 
-.menu_lateral_vendas>.menu_lateral_header>h5 {
-    padding: 0.5em;
-    justify-self: center;
-    border-bottom: 1px solid white;
-    font-size: 0.85em;
-}
-
-.menu_lateral_vendas>.menu_lateral_body {
-    padding: 0.5em;
-    font-size: 0.85em;
-}
-
-
-
-
-
-footer.rodape {
-    position: relative;
-    z-index: 1100;
+.menu_lateral_vendas>.menu_lateral_vendas_conteudo {
+    padding-left: 1.6em;
+    font-size: 1.3em;
 }
