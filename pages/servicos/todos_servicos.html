@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="../../assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link rel="shortcut icon" href="../../assets/icons/logo.ico" type="image/x-icon">
+    <link href="../../assets/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/fonts.css">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/todos_servicos.css">
     <title>R.E Assistência técnica | Todos Serviços</title>
 </head>
 
@@ -20,23 +21,126 @@
             </a>
             <nav class="nav w-100">
                 <a class="flex-sm-fill text-sm-center" href="../../index.html">Home</a>
-                <a class="ativo flex-sm-fill text-sm-center" href="todos_servicos.html">Serviços</a>
+                <a class="ativo flex-sm-fill text-sm-center" role="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">Serviços</a>
                 <a class="flex-sm-fill text-sm-center" href="../vendas.html">Vendas</a>
                 <a class="flex-sm-fill text-sm-center" href="../contato.html">Contato</a>
                 <a class="flex-sm-fill text-sm-center" href="../sobre.html">Sobre</a>
             </nav>
         </section>
+        <!-- MENU LATERAL SERVICOS -->
+        <div class="offcanvas offcanvas-start menu_lateral" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class=" offcanvas-header menu_lateral_header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Serviços</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+            </div>
+            <div class="offcanvas-body menu_lateral_body">
+                <ul class="list-unstyled">
+                    <!-- Celulares e Tablets -->
+                    <li class="titulo_vendas_lateral">Celulares e Tablets 📱</li>
+                    <ul class="caixa_links_lateral list-unstyled">
+                        <li><a href="pages/celular_tablet/troca_tela.html">Troca de tela</a></li>
+                        <li><a href="pages/celular_tablet/troca_bateria.html">Troca de bateria</a></li>
+                        <li><a href="pages/celular_tablet/conector_carga.html">Conectores de carga</a></li>
+                        <li><a href="pages/celular_tablet/att_formatacao.html">Atualizações e formatação</a></li>
+                        <li><a href="pages/celular_tablet/manutencao_geral.html">Outras manutenções gerais</a></li>
+                    </ul>
+                    <!-- Notebooks e PCs -->
+                    <li class="titulo_vendas_lateral">Notebooks e PCs 💻</li>
+                    <ul class="caixa_links_lateral list-unstyled">
+                        <li><a href="pages/note_pc/formatacao_instalacao.html">Formatação e instalação de sistemas</a>
+                        </li>
+                        <li><a href="pages/note_pc/limpeza_manuntencao.html">Limpeza e manutenção preventiva</a></li>
+                        <li><a href="pages/note_pc/troca_pecas.html">Troca de peças (HD, SSD, memória etc.)</a></li>
+                        <li><a href="pages/note_pc/diagnostico_reparos.html">Diagnóstico e reparos em hardware</a></li>
+                        <li><a href="pages/note_pc/otimizacao.html">Otimização de desempenho</a></li>
+                    </ul>
+                    <!-- Marketing e Design -->
+                    <li class="titulo_vendas_lateral">Marketing e Design 🎨</li>
+                    <ul class="caixa_links_lateral list-unstyled">
+                        <li><a href="pages/marketing_design/criacao_artes.html">Criação de artes</a></li>
+                        <li><a href="pages/marketing_design/gestao_redes_sociais.html">Gestão de redes sociais</a></li>
+                        <li><a href="pages/marketing_design/gestao_trafego_pago.html">Gestão de tráfego pago</a></li>
+                    </ul>
+                    <!-- Suporte Remoto -->
+                    <li class="titulo_vendas_lateral">Suporte Remoto 🌐</li>
+                    <ul class="caixa_links_lateral list-unstyled">
+                        <li><a href="pages/suporte_remoto/instalacao_programas.html">Instalação de programas</a></li>
+                        <li><a href="pages/suporte_remoto/config_otimizacao.html">Configurações e otimizações</a></li>
+                        <li><a href="pages/suporte_remoto/ajuda_softwares.html">Ajuda com softwares específicos</a></li>
+                    </ul>
+                    <!-- Motorista Particular -->
+                    <li class="titulo_vendas_lateral">Motorista Particular 🚗</li>
+                    <ul class="caixa_links_lateral list-unstyled">
+                        <li><a href="pages/motorista/motorista_particular.html">Transporte Privado e Confiável</a></li>
+                    </ul>
+                </ul>
+
+            </div>
+        </div>
+
     </header>
 
-
     <main class="principal container-fluid" style="justify-items: center;">
-        <section style="height: 900px; width: 80%; text-align: center;">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel error delectus saepe id dolor qui, illum,
-            maiores voluptas vitae nemo quis quaerat itaque unde quibusdam praesentium, soluta sunt tempore aut.
-        </section>
+        <h1 class="titulo_principal">🛠️ R.E Assistência Técnica – Bem-vindo!</h1>
+        <h2 class="titulo_secundario">🌞 Olá! Seja muito bem-vindo(a) à R.E Assistência Técnica!</h2>
+        <h2 class="titulo_secundario">Eu sou o Caio, e estou aqui para te ajudar com o que precisar!</h2>
+        <h2 class="titulo_secundario">Como posso te ajudar hoje? 😊</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm list-unstyled caixa_links_separados">
+                    <li class="titulo_links">Celulares e Tablets 📱</li>
+                    <ul class="list-unstyled">
+                        <li><a class="links" href="pages/celular_tablet/troca_tela.html">Troca de tela</a></li>
+                        <li><a class="links" href="pages/celular_tablet/troca_bateria.html">Troca de bateria</a></li>
+                        <li><a class="links" href="pages/celular_tablet/conector_carga.html">Conectores de carga</a></li>
+                        <li><a class="links" href="pages/celular_tablet/att_formatacao.html">Atualizações e formatação</a></li>
+                        <li><a class="links" href="pages/celular_tablet/manutencao_geral.html">Outras manutenções gerais</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm list-unstyled caixa_links_separados">
+                    <li class="titulo_links">Notebooks e PCs 💻</li>
+                    <ul class="list-unstyled">
+                        <li><a class="links" href="pages/note_pc/formatacao_instalacao.html">Formatação e instalação de sistemas</a>
+                        </li>
+                        <li><a class="links" href="pages/note_pc/limpeza_manuntencao.html">Limpeza e manutenção preventiva</a></li>
+                        <li><a class="links" href="pages/note_pc/troca_pecas.html">Troca de peças (HD, SSD, memória etc.)</a></li>
+                        <li><a class="links" href="pages/note_pc/diagnostico_reparos.html">Diagnóstico e reparos em hardware</a></li>
+                        <li><a class="links"  href="pages/note_pc/otimizacao.html">Otimização de desempenho</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm list-unstyled caixa_links_separados">
+                    <li class="titulo_links">Marketing e Design 🎨</li>
+                    <ul class="list-unstyled">
+                        <li><a class="links" href="pages/marketing_design/criacao_artes.html">Criação de artes</a></li>
+                        <li><a class="links" href="pages/marketing_design/gestao_redes_sociais.html">Gestão de redes sociais</a></li>
+                        <li><a class="links" href="pages/marketing_design/gestao_trafego_pago.html">Gestão de tráfego pago</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm list-unstyled caixa_links_separados">
+                    <li class="titulo_links">Suporte Remoto 🌐</li>
+                    <ul class="list-unstyled">
+                        <li><a class="links" href="pages/suporte_remoto/instalacao_programas.html">Instalação de programas</a></li>
+                        <li><a class="links" href="pages/suporte_remoto/config_otimizacao.html">Configurações e otimizações</a></li>
+                        <li><a class="links" href="pages/suporte_remoto/ajuda_softwares.html">Ajuda com softwares específicos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 list-unstyled caixa_links_separados">
+                    <li class="titulo_links">Motorista Particular 🚗</li>
+                    <ul class="list-unstyled">
+                        <li><a class="links" href="pages/motorista/motorista_particular.html">Transporte Privado e Confiável</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
 
- <footer class="rodape container-fluid">
+    <footer class="rodape container-fluid">
         <section class="principal_footer">
             <section class="informacao_footer container pt-5 pb-5">
                 <div class="row text-center align-items-center">
@@ -50,13 +154,19 @@
                     <div class="col-12 col-md-3 mb-3 mb-md-0 barra_vertical_servico">
                         <h2>Serviços</h2>
                         <ul class="list-unstyled">
-                            <li class="list-group-item"><a href="pages/servicos/todos_servicos.html">Primeiro Item</a></li>
-                            <li class="list-group-item"><a href="pages/servicos/todos_servicos.html">Segundo Item</a></li>
-                            <li class="list-group-item"><a href="pages/servicos/todos_servicos.html">Terceiro Item</a></li>
-                            <li class="list-group-item"><a href="pages/servicos/todos_servicos.html">Quarto Item</a></li>
-                            <li class="list-group-item"><a href="pages/servicos/todos_servicos.html">Quinto Item</a></li>
-                            <li class="list-group-item"><a href="pages/servicos/todos_servicos.html">Sexto Item</a></li>
-                            <li class="list-group-item"><a href="pages/servicos/todos_servicos.html">Setimo Item</a></li>
+                            <li class="list-group-item"><a href="todos_servicos.html">Todos Serviços</a></li>
+                            <li class="list-group-item"><a href="pages/celular_tablet/troca_tela.html">Troca de Tela</a>
+                            </li>
+                            <li class="list-group-item"><a href="pages/celular_tablet/troca_bateria.html">Troca de
+                                    Bateria</a></li>
+                            <li class="list-group-item"><a href="pages/note_pc/troca_pecas.html">Troca de Peças PC</a>
+                            </li>
+                            <li class="list-group-item"><a href="pages/marketing_design/gestao_trafego_pago.html">Gestão
+                                    de Tráfego Pago</a></li>
+                            <li class="list-group-item"><a href="pages/suporte_remoto/ajuda_softwares.html">Ajuda com
+                                    Softwares</a></li>
+                            <li class="list-group-item"><a href="pages/motorista/motorista_particular.html">Motorista
+                                    Particular</a></li>
                         </ul>
                     </div>
 
@@ -132,8 +242,9 @@
             </section>
         </section>
     </footer>
+
     <script src="../../assets/jquery/jquery.min.js"></script>
-    <script src="../../assets/jquery/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
